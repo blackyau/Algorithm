@@ -16,3 +16,18 @@ https://leetcode-cn.com/problems/min-stack/
 相当于空间换时间吧，因为用了 1 倍的空间，储存了在每一个位置上的最小数。
 
 [LeetCode_155.java](src/LeetCode_155.java)
+
+
+## LeetCode_232_用栈实现队列
+
+请你仅使用两个栈实现先入先出队列。队列应当支持一般队列支持的所有操作（push、pop、peek、empty）
+
+https://leetcode-cn.com/problems/implement-queue-using-stacks/
+
+难度：简单
+
+要保证两个栈在进行操作到时候，都是整体进行操作。
+- 1 号栈要往 2 号栈压入数据时，必须要一次性把所有数据压入。 
+- 1 号栈迁移数据至 2 号栈的时候，要确定 2 号栈为空才行。
+
+[LeetCode_232.java](src/LeetCode_232.java)
