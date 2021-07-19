@@ -37,6 +37,8 @@ https://leetcode-cn.com/problems/implement-queue-using-stacks/
 
 给你一个整数数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。返回每一个滑动窗口中的最大值。
 
+https://leetcode-cn.com/problems/sliding-window-maximum/
+
 难度：困难
 
 遍历整个数组，然后使用双端队列（弹出和入队在两边都行的队列）。一直让最大的数字保持在队列的头部，如果尾部来了更大的数字，就把头部弹出。同时如果队列的队头等于 `i-w` 就说明队头已过期，需要弹出队头。
