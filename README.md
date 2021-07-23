@@ -51,18 +51,22 @@ https://leetcode-cn.com/problems/sliding-window-maximum/
 给你一个二叉树的根节点 root ，树中每个节点都存放有一个 0 到 9 之间的数字。
 每条从根节点到叶节点的路径都代表一个数字：
 
+https://leetcode-cn.com/problems/sum-root-to-leaf-numbers/
+
 例如，从根节点到叶节点的路径 1 -> 2 -> 3 表示数字 123 。计算从根节点到叶节点生成的 所有数字之和。
 
 难度：中等
 
 看到题目马上就想到了二叉树的前序遍历，结合递归就行。主要就是不确定当前是第几层要乘以 10 的多少次方，看了题解才知道，可以直接一直传一个值。每递归一次就 * 10 再加上自己的值。
 
-[LeetCode_129](src/LeetCode_129.java)
+[LeetCode_129.java](src/LeetCode_129.java)
 
 
 ## LeetCode_236_二叉树的最近公共祖先
 
 给定一个二叉树, 找到该树中两个指定节点的最近公共祖先。
+
+https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/
 
 难度：中等
 
@@ -77,18 +81,20 @@ https://leetcode-cn.com/problems/sliding-window-maximum/
 
 对于最后一种情况，看起来似乎和最开始说的规则有冲突，其实不然。是因为递归出口也包含 `root == q || root == p` 因为最近公共祖先的位置肯定是高于或等于 q 或 p 的所以这里也要作为一个递归出口。
 
-[LeetCode_236](src/LeetCode_236.java)
+[LeetCode_236.java](src/LeetCode_236.java)
 
 
 ## LeetCode_113_路径总和II
 
 给你二叉树的根节点 root 和一个整数目标和 targetSum ，找出所有从根节点到叶子节点 路径总和等于给定目标和的路径。
 
+https://leetcode-cn.com/problems/path-sum-ii/
+
 难度：中等
 
 使用 DFS 的方式搜索数据，每到达一个节点就用 targetSum 减去当前节点的数值。并把自己添加到 path 里面用于储存一条路径。同时还要注意在每一条路径 return 之前都要把当前 path 的最后一个删掉，不然会导致对其他分支产生污染。这种方法也叫回溯。
 
-[LeetCode_113](src/LeetCode_113.java)
+[LeetCode_113.java](src/LeetCode_113.java)
 
 
 ## UVa133_救济金发放
@@ -104,7 +110,7 @@ https://onlinejudge.org/external/1/133.pdf
 
 看到这个就想起了，循环队列为了解决数据假满的解决方案。
 
-[UVa133](src/UVa133.java)
+[UVa133.java](src/UVa133.java)
 
 
 ## LeetCode_3_无重复字符的最长子串
@@ -117,6 +123,6 @@ https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
 
 使用滑动窗口，右端一步一步的往右边移动，如果有重复的字符出现，就把左端的移动到重复字符第一次出现时的位置的下一个位置。
 
-使用了 HashMap 来快速获取，每一个字符上一次出现的位置。其实也可以用 ASCII 码来存储字符出现过的下标，可以进一步降低时间复杂度。
+使用了 HashMap 来快速获取，重复字符上一次出现的位置。其实也可以用 ASCII 码来存储字符出现过的下标，可以进一步降低时间复杂度。
 
-[LeetCode_3](src/LeetCode_3.java)
+[LeetCode_3.java](src/LeetCode_3.java)
