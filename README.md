@@ -105,3 +105,18 @@ https://onlinejudge.org/external/1/133.pdf
 看到这个就想起了，循环队列为了解决数据假满的解决方案。
 
 [UVa133](src/UVa133.java)
+
+
+## LeetCode_3_无重复字符的最长子串
+
+给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。
+
+https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
+
+难度：中等
+
+使用滑动窗口，右端一步一步的往右边移动，如果有重复的字符出现，就把左端的移动到重复字符第一次出现时的位置的下一个位置。
+
+使用了 HashMap 来快速获取，每一个字符上一次出现的位置。其实也可以用 ASCII 码来存储字符出现过的下标，可以进一步降低时间复杂度。
+
+[LeetCode_3](src/LeetCode_3.java)
