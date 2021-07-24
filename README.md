@@ -126,3 +126,24 @@ https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
 使用了 HashMap 来快速获取，重复字符上一次出现的位置。其实也可以用 ASCII 码来存储字符出现过的下标，可以进一步降低时间复杂度。
 
 [LeetCode_3.java](src/LeetCode_3.java)
+
+
+## LeetCode_1736_替换隐藏数字得到的最晚时间
+
+给你一个字符串 time ，格式为 hh:mm（小时：分钟），其中某几位数字被隐藏（用 ? 表示）。
+
+有效的时间为 00:00 到 23:59 之间的所有时间，包括 00:00 和 23:59 。
+
+替换 time 中隐藏的数字，返回你可以得到的最晚有效时间。
+
+https://leetcode-cn.com/problems/latest-time-by-replacing-hidden-digits/
+
+难度：简单
+
+- 第一位最大为 2 或 1，当第二位在 [4,9] 之间的时候（注意 `'?'` 的 ASCII 码要比 `'9'` 大，还要考虑第二位为 ? 时的情况），就只能取到 1，此外都可以取到 2 。因为时只有 23,没有24,25等
+- 第二位最大为 3 或 9，当第一位为 2 的时候就可以取到 3，其他时候都只能取 9
+- 第三位始终为 :
+- 第四位最大取 5
+- 第五位最大取 9
+
+[LeetCode_1736.java](src/LeetCode_1736.java)
