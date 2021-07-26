@@ -166,3 +166,16 @@ https://leetcode-cn.com/problems/restore-the-array-from-adjacent-pairs/
 用 HashMap 统计出来每一个数字，所有与它相邻的数字，作为 value。然后通过判断 value 数组的长度，长度为一的它就是 nums 中的开头或结尾。接下来，在依次从左到右找到每一个元素的相邻位即可。
 
 [LeetCode_1743.java](src/LeetCode_1743.java)
+
+
+## Offer_5_替换空格
+
+请实现一个函数，把字符串 s 中的每个空格替换成"%20"。
+
+https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/
+
+难度：简单
+
+用的 StringBuilder
+
+[Offer_5.java](src/Offer_5.java)
