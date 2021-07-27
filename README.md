@@ -179,3 +179,22 @@ https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/
 用的 StringBuilder
 
 [Offer_5.java](src/Offer_5.java)
+
+
+## LeetCode_671_二叉树中第二小的节点
+
+给定一个非空特殊的二叉树，每个节点都是正数，并且每个节点的子节点数量只能为 2 或 0。如果一个节点有两个子节点的话，那么该节点的值等于两个子节点中较小的一个。
+
+更正式地说，root.val = min(root.left.val, root.right.val) 总成立。
+
+给出这样的一个二叉树，你需要输出所有节点中的第二小的值。如果第二小的值不存在的话，输出 -1 。
+
+https://leetcode-cn.com/problems/second-minimum-node-in-a-binary-tree/
+
+难度：简单
+
+通过题目可以得知，根节点就是最小的一个节点。所以我们的目标就是要找一个比根节点大，但是在其他节点中最小的一个节点。
+
+而且利用题目这个含义，还可以剪枝，如果当前节点的值大于根结点的话，就可以不进入了。子树的根节点都比它大了，其他节点肯定都更大，那肯定不用继续找了。
+
+[LeetCode_671.java](src/LeetCode_671.java)
