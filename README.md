@@ -198,3 +198,20 @@ https://leetcode-cn.com/problems/second-minimum-node-in-a-binary-tree/
 而且利用题目这个含义，还可以剪枝，如果当前节点的值大于根结点的话，就可以不进入了。子树的根节点都比它大了，其他节点肯定都更大，那肯定不用继续找了。
 
 [LeetCode_671.java](src/LeetCode_671.java)
+
+
+## LeetCode_863_二叉树中所有距离为 K 的结点
+
+给定一个二叉树（具有根结点 root）， 一个目标结点 target ，和一个整数值 K 。
+
+返回到目标结点 target 距离为 K 的所有结点的值的列表。 答案可以以任何顺序返回。
+
+https://leetcode-cn.com/problems/all-nodes-distance-k-in-binary-tree/
+
+难度：中等
+
+先遍历整个树，把所有节点的父节点都储存起来。然后再用 DFS，从 target 开始同时遍历左节点、右节点、父节点。
+
+为层数使用了参数传递，每递归一次就 + 1，所以还需要使用了 from 参数，用来确定这一次递归时是从哪里来的。当从上往下进行递归的时候，就要确保它不会从下网上走回头路。
+
+[LeetCode_863.java](src/LeetCode_863.java)
