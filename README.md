@@ -235,3 +235,20 @@ https://leetcode-cn.com/problems/path-in-zigzag-labelled-binary-tree/
 
 对于这里的之字排序，可以找规律。当前节点的上一层其中的最左边的数字 + 最右边的数字的和，用来减去 (当前节点值/2) 就是当前节点的父节点了。这到题就用数学的方式解出来了。
 
+[LeetCode_1104.java](src/LeetCode_1104.java)
+
+
+## LeetCode_171_Excel表列序号
+
+给定一个Excel表格中的列名称，返回其相应的列序号。
+
+https://leetcode-cn.com/problems/excel-sheet-column-number/
+
+难度：简单
+
+26 进制数转 10 进制。学习到一种新方法 `ans = ans * 进制 + 当前位数` 用这种方式在 for 循环里面也可以计算出来进制转换之后的数，比 当前位数 * 权值要更优雅一点。
+
+本质也就是把数往前面推进一位，比如 100 -> 1000 也就是把最前面的 1 往前推进了一位，也就是乘了一个进制。
+
+[LeetCode_171.java](src/LeetCode_171.java)
+
