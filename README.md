@@ -252,3 +252,23 @@ https://leetcode-cn.com/problems/excel-sheet-column-number/
 
 [LeetCode_171.java](src/LeetCode_171.java)
 
+
+## LeetCode_987_二叉树的垂序遍历
+
+https://leetcode-cn.com/problems/vertical-order-traversal-of-a-binary-tree/
+
+难度：困难
+
+首先建立一个 HashMap 将节点作为 Key，在使用 DFS 遍历每一个节点的 [row, col, val] 作为 value。
+
+然后使用排序，首先将列比较小的放在最前面，其次就是把行比较小的放前面，最后就是看 val 最小的放前面。
+
+排序完毕后，再遍历所有数据的这个列表，把为同一列的节点数据放在一个 tmpList 中。这里使用了双指针，for 循环最外部的为 i，内部有一个自增的 j。
+
+- 每次循环的时候都先判断一下，j 是否还在合法的范围内
+- 再判断是否为同一列
+- 最后再将 val 添加进 tmpList
+- 循环结束后将 `i = j`
+
+[LeetCode_987.java](src/LeetCode_987.java)
+
