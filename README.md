@@ -272,3 +272,12 @@ https://leetcode-cn.com/problems/vertical-order-traversal-of-a-binary-tree/
 
 [LeetCode_987.java](src/LeetCode_987.java)
 
+
+## LeetCode_1337_矩阵中战斗力最弱的 K 行
+
+https://leetcode-cn.com/problems/the-k-weakest-rows-in-a-matrix/
+
+难度：简单
+
+遍历矩阵的每一行，用一个新的数组用来储存那一行里面 1 的个数和行数。然后按个数排序一下，最后输出。
+
