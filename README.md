@@ -283,3 +283,14 @@ https://leetcode-cn.com/problems/the-k-weakest-rows-in-a-matrix/
 
 [LeetCode_1337.java](src/LeetCode_1337.java)
 
+
+## LeetCode_743_网络延迟时间
+
+https://leetcode-cn.com/problems/network-delay-time/
+
+难度：中等
+ 
+最短路径，使用了堆优化版的 Dijkstra 算法，使用邻接表储存节点信息。从一个节点出发，每次都找一下从起始点开始的权值到下一个节点的权值之和谁最小。遍历完毕后的 dis[] 数组储存的就是，从起始节点到 i 节点的权值最小值是多少。最后返回权值最大的一个节点的权值就行。
+
+[LeetCode_743.java](src/LeetCode_743.java)
+
