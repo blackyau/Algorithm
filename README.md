@@ -294,3 +294,30 @@ https://leetcode-cn.com/problems/network-delay-time/
 
 [LeetCode_743.java](src/LeetCode_743.java)
 
+
+## LeetCode_581_最短无序连续子数组
+
+给你一个整数数组 nums ，你需要找出一个 连续子数组 ，如果对这个子数组进行升序排序，那么整个数组都会变为升序排序。
+
+请你找出符合题意的 最短 子数组，并输出它的长度。
+
+https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/
+
+难度：中等
+
+输入[2, 3, 11, 8, 10, 9, 15, 22]
+算法流程:
+从左往右遍历数组, 发现 {15, 22} 是递增的, 同时 15 比前面所有的元素都大, 说明 {15, 22} 的位置已经固定了
+从右往左遍历数组, 发现 {2, 3} 是递增的, 同时 3 比右边所有的元素都小, 所以 {2,3} 的位置也已经固定了
+
+左往右遍历数组, 记录 arr[i] 左侧的最大值, 如果 arr[i]>=max, 就更新 max,
+如果 arr[i]<max, 则使用变量 right 记录索引 i; 遍历结束后,right 右侧的部分不需要排序.
+(right 左侧的部分可能需要全部排序或者部分排序,需要根据从右往左遍历的结果决定)
+
+从右往左遍历数组, 记录 arr[i] 右侧的最小值, 如果 arr[i]<=min, 就更新 min,
+如果 arr[i]>min, 则使用变量 left 记录索引 i; 遍历结束后, left 左侧的部分不需要排序
+
+如果数组本身就是递增的 [1,2,3,4] 那么在遍历的时候，max 和 min 会被不停的刷新，left 和 right 会一直都是原始值 {-1, 0}，经过 `right - left + 1` 就会输出 0
+
+[LeetCode_581.java](src/LeetCode_581.java)
+
