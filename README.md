@@ -321,3 +321,35 @@ https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/
 
 [LeetCode_581.java](src/LeetCode_581.java)
 
+
+## LeetCode_802_找到最终的安全状态
+
+在有向图里面找没有环的路径
+
+https://leetcode-cn.com/problems/find-eventual-safe-states/
+
+难度：中等
+
+用 DFS 遍历搜索所有节点，并使用一个单独的数组来储存该节点的信息。
+
+- 0:该节点未被访问
+- 1:该节点位于递归栈中或者在某个环上
+- 2:该节点搜索完毕是个安全节点
+
+DFS 搜索使用的以下方法
+
+```java
+class Solution {
+    public boolean safe (int[][] graph, int[] flag, int x) {  // 返回 true 表示安全，返回 false 表示不安全
+        if (flag[x] > 0) return flag[x] == 2;  // 当前节点值如果被遍历过，就只需要看它是否安全就行，如果没有被遍历过默认为 0 就执行下面的
+        flag[x] = 1;  // 开始遍历该节点，就设置为 1
+        for (int y : graph[x]) {  // 遍历该节点的所有出度
+            if (!safe(graph, flag, y)) {  // 递归看看这个出度是不是安全的（有没有终点）
+                return false;  // 如果这个出度没有终点，这次就返回 false
+            }
+        }
+        flag[x] = 2;  // 这个节点所有的出度都遍历完了，都有终点或者是本来就没有出度
+        return true;  // 就确定这是个安全的节点咯
+    }
+}
+```
