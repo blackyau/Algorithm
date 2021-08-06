@@ -353,3 +353,16 @@ class Solution {
     }
 }
 ```
+
+[LeetCode_802.java](src/LeetCode_802.java)
+
+## LeetCode_416_分割等和子集
+
+给你一个 只包含正整数 的 非空 数组 nums 。请你判断是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。
+
+难度：中等
+
+背包问题练习，使用了一位空间优化的方法。一维空间的话，在遍历的时候就要从大到小进行遍历。
+
+[LeetCode_416.java](src/LeetCode_416.java)
+
