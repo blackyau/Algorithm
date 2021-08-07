@@ -388,3 +388,14 @@ class Solution {
 
 [LeetCode_847.java](src/LeetCode_847.java)
 
+
+## LeetCode_457_环形数组是否存在循环
+
+难度：中等
+
+使用的快慢指针，对于走过了的节点都做了置 0 处理。同时还有要在数组中训练的一些写法，就像循环队列一样吧。
+
+`j = (i + nums[i] + 1000*nums.length) % nums.length;`
+
+[LeetCode_457.java](src/LeetCode_457.java)
+
