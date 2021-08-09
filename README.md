@@ -434,3 +434,18 @@ Queue<Long> pq = new PriorityQueue<>();
 
 使用小顶堆的话，就是先存后排序，而使用动态规划就是先排序后存。
 
+[LeetCode_264.java](src/LeetCode_264.java)
+
+
+## LeetCode_313_超级丑数
+
+超级丑数 是一个正整数，并满足其所有质因数都出现在质数数组 primes 中。
+
+给你一个整数 n 和一个整数数组 primes ，返回第 n 个 超级丑数 。
+
+难度：中等
+
+这个题和 [LeetCode_264_丑数 II](https://github.com/blackyau/Algorithm#leetcode_264_%E4%B8%91%E6%95%B0-ii) 比较类似，只是这道题指定了质因数。我就按照之前的做法，创建了一个数组用来储存每一个质因数的指针。每一趟计算完后，再去遍历一趟看看这次循环用了哪一个质因数，再去把指针 + 1。
+
+[LeetCode_313.java](src/LeetCode_313.java)
+
