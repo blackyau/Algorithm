@@ -467,3 +467,34 @@ Queue<Long> pq = new PriorityQueue<>();
 
 [LeetCode_413.java](src/LeetCode_413.java)
 
+
+## LeetCode_446_等差数列划分 II - 子序列
+
+https://leetcode-cn.com/problems/arithmetic-slices-ii-subsequence/
+
+难度：困难
+
+使用一个数组，下标以 nums 的下标一一对应，表示以 `nums[i]` 作为结尾的数组，有多少个不同差值的数组。也就是说 `nums[i]` 里面是一个 HashMap，其中的 Key 为差值，Value 为计数器。
+
+将该数组初始化了之后，就使用两个 for 嵌套循环，去计算每两个数之间的差值
+
+```java
+for (int i = 1; i < len; i++) {   // 以 i 结尾的数
+    for (int j = 0; j < i; j++) { // i 前面的那一位数
+        long diff = (long) nums[i] - nums[j];  // 差值
+        if (diff > Integer.MAX_VALUE || diff < Integer.MIN_VALUE) {  // 处理特殊情况
+            continue;
+        }
+        // dp[i][diff] += (dp[j][diff] + 1)  先看自己在这个差值之下有多少计数，然后再把前一个数在同一个计数情况下的计数器+1，因为就相当于把这个差值数组连接上了 i 多了一位了
+        dp[i].put(diff, dp[i].getOrDefault(diff, 0) + dp[j].getOrDefault(diff, 0) + 1);
+        // 这次两个数的差值，与之前的等差数列公差相等的时候，说明可以接上，此时计算+1
+        if (dp[j].containsKey(diff)) {
+            res += dp[j].get(diff);  // 对结果的贡献「恰好是」之前的某个 j 的对应状态值，这里的 j 一定会在之前的某一个 i 加上 1，看上面有注释的那一行代码
+        }
+    }
+}
+return res;
+```
+
+[LeetCode_446.java](src/LeetCode_446.java)
+
