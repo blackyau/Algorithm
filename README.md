@@ -572,3 +572,20 @@ i 能被第 i 位上的数字整除
 
 [LeetCode_526.java](src/LeetCode_526.java)
 
+
+## LeetCode_552_学生出勤记录 II
+
+https://leetcode-cn.com/problems/student-attendance-record-ii/
+
+难度：困难
+
+使用带记忆的 DFS 搜索，首先创建了数组 `int[last][acount][lcount] cache` 当前剩余的位置为第一个维度，a 的数量为第二个维度，l 的数量为第三个维度。一开始的时候把所有位置都初始为 `-1`。
+
+```java
+int dfs(int last, int acount, int lcount)
+```
+
+当 A 的数量达到了 2 或者是 L 的数量达到了 3 那么就返回 0，当 last 为 0 的时候就说明这是一个可行的解返回 1。同时如果遇到有重复的，就直接返回之前储存在数据中的数据。
+
+还需要注意的是，在递归的时候，如果要填充的下一个字符是 A 或 L 的时候，调用 dfs() 的时候 lcount 就传 0 了，因为题目只是说的要连续的，当这个位置不放 L 的时候，就要把这个计数器置 0。
+
