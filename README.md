@@ -604,3 +604,18 @@ int dfs(int last, int acount, int lcount)
 
 [LeetCode_345.java](src/LeetCode_345.java)
 
+
+## LeetCode_541_反转字符串 II
+
+给定一个字符串 s 和一个整数 k，从字符串开头算起，每 2k 个字符反转前 k 个字符。
+
+https://leetcode-cn.com/problems/reverse-string-ii/
+
+难度：简单
+
+使用一层 for 循环，从 0 开始到字符串结束，这个也就是需要反转字符串的起始位置，步进使用 `i += 2*k` 因为题目说了每 2k 个字符反转一次，所以这里就直接让步进为 2k。
+
+然后在通过对左指针 `+ k -1` 就可以得到反转字符串的终点，同时还要注意这个终点有可能会超过字符串的长度，所以在确认本次反转的真正终点的时候，需要取字符串的长度和刚刚计算出来结果的最小值。
+
+[LeetCode_541.java](src/LeetCode_541.java)
+
