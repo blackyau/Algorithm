@@ -619,3 +619,16 @@ https://leetcode-cn.com/problems/reverse-string-ii/
 
 [LeetCode_541.java](src/LeetCode_541.java)
 
+
+## LeetCode_443_压缩字符串
+
+https://leetcode-cn.com/problems/string-compression/
+
+难度：中等
+
+定义 `i,j,idx` 分别为重复字符的第一位， 经过缩小后字符数组的最后一位（插入数的位置），重复数组的真实下标最后一位。同时我们就可以知道 `idx-i` 也就是重复数组的长度了。
+
+因为字符数组长度被缩小了过后，我们在往数组重写入数字的时候，还需要将当前 `i` 位置上的字符搬移到 `j` 然后在 `j` 的后面写入数字，那才是正确的。
+
+[LeetCode_443.java](src/LeetCode_443.java)
+
