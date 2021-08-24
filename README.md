@@ -632,3 +632,11 @@ https://leetcode-cn.com/problems/string-compression/
 
 [LeetCode_443.java](src/LeetCode_443.java)
 
+
+## LeetCode_1646_获取生成数组中的最大值
+
+https://leetcode-cn.com/problems/get-maximum-in-generated-array/
+
+难度：简单
+
+签到题，注意一下 n 的取值范围
