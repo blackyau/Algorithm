@@ -640,3 +640,17 @@ https://leetcode-cn.com/problems/get-maximum-in-generated-array/
 难度：简单
 
 签到题，注意一下 n 的取值范围
+
+
+## LeetCode_797_所有可能的路径
+
+https://leetcode-cn.com/problems/all-paths-from-source-to-target/
+
+难度：中等
+
+在有向无环图中寻找所有能够到达 n-1 节点的路径
+
+因为节点最多只有 15 个，所以直接使用 DFS 搜索所有路径，然后还要注意回溯。在 DFS 进入下一个节点之后，还要把当前路径中的最后一个节点删掉，恢复到以前的状态。
+
+[LeetCode_797.java](src/LeetCode_797.java)
+
