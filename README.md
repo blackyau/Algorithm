@@ -654,3 +654,20 @@ https://leetcode-cn.com/problems/all-paths-from-source-to-target/
 
 [LeetCode_797.java](src/LeetCode_797.java)
 
+
+## LeetCode_881_救生艇
+
+https://leetcode-cn.com/problems/boats-to-save-people/
+
+难度：简单
+
+第 i 个人的体重为 people[i]，每艘船可以承载的最大重量为 limit。
+
+每艘船最多可同时载两人，但条件是这些人的重量之和最多为 limit。
+
+返回载到每一个人所需的最小船数。(保证每个人都能被船载)。
+
+先把数组排序一下，然后用两个指针分别放在左右两边，如果 `people[l] + people[r] <= limit` 那么就让两个指针都往中间移动，此外就只移动 `r` 同时都让 `count++`。
+
+[LeetCode_881.java](src/LeetCode_881.java)
+
