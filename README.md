@@ -671,3 +671,18 @@ https://leetcode-cn.com/problems/boats-to-save-people/
 
 [LeetCode_881.java](src/LeetCode_881.java)
 
+
+## LeetCode_1588_所有奇数长度子数组的和
+
+给你一个正整数数组 arr ，请你计算所有可能的奇数长度子数组的和。
+
+https://leetcode-cn.com/problems/sum-of-all-odd-length-subarrays/
+
+难度：简单
+
+先说暴力法，先穷举每一位以 i 为开始的起点，然后穷举长度为 1,3,5,7 的子串，最后去计算每一个子串里面数字之和。
+
+之后还有前缀和，先计算出 0 到每一位之间数字之和为 `int[] sum`，然后再穷举每一种长度和每一个起点，通过 `r = l + len - 1` 计算出子串的右端，最后用 `ans += sum[r+1] - sum[l]` 快速获取子串内所有数之和。
+
+[LeetCode_1588.java](src/LeetCode_1588.java)
+
