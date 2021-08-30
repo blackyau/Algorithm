@@ -686,3 +686,16 @@ https://leetcode-cn.com/problems/sum-of-all-odd-length-subarrays/
 
 [LeetCode_1588.java](src/LeetCode_1588.java)
 
+
+## LeetCode_528_按权重随机选择
+
+https://leetcode-cn.com/problems/random-pick-with-weight/
+
+难度：中等
+
+将所有数都平放在数轴上，然后使用 `Math.Random()` 生成一个在数轴上的随机数，再查找看这个生成的数属于什么范围。
+
+使用了前缀和，先计算了从 0 到每一个数之间所有数的和，把结果也放在了对应坐标的一个新数组 `int[] sum` 中。然后随机数生成一个数，再通过二分查找判断这个数对应哪一个下标的范围中，就是答案了。
+
+[LeetCode_528.java](src/LeetCode_528.java)
+
