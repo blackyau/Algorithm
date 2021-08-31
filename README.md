@@ -699,3 +699,14 @@ https://leetcode-cn.com/problems/random-pick-with-weight/
 
 [LeetCode_528.java](src/LeetCode_528.java)
 
+
+## LeetCode_1109_航班预订统计
+
+https://leetcode-cn.com/problems/corporate-flight-bookings/
+
+难度：中等
+
+假想成，乘客从 first 的位置上车，从 last 的位置下车，每次上下车的人数都是 seats，所以一开始就遍历 `bookings` 然后在 first 的位置增加人数也就是 `ans[first - 1] += seats` 然后在 last 的位置下车也就是 `ans[last] -= seats`。`first - 1` 是因为题目要求的编号从 1 开始，`last` 不减是因为在 `last - 1` 也就是在下车的同时，它也被算作还依然占用座位。
+
+[LeetCode_1109.java](src/LeetCode_1109.java)
+
