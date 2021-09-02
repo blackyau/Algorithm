@@ -710,3 +710,16 @@ https://leetcode-cn.com/problems/corporate-flight-bookings/
 
 [LeetCode_1109.java](src/LeetCode_1109.java)
 
+
+## 剑指 Offer 22 链表中倒数第k个节点
+
+输入一个链表，输出该链表中倒数第 k 个节点。为了符合大多数人的习惯，本题从 1 开始计数，即链表的尾节点是倒数第 1 个节点。
+
+https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/
+
+难度：简单
+
+先遍历一次获取整个链表的长度，然后再去找 `length - k` 的那个节点。用快慢指针，快指针比慢指针快 k 个节点可以降低时间复杂度。
+
+[Offer_22.java](src/Offer_22.java)
+
