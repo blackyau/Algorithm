@@ -723,3 +723,16 @@ https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/
 
 [Offer_22.java](src/Offer_22.java)
 
+
+## 剑指 Offer 10-I. 斐波那契数列
+
+写一个函数，输入 n ，求斐波那契（Fibonacci）数列的第 n 项（即 F(N)）
+
+https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/
+
+难度：简单
+
+使用递推实现动态规划，就用提供的公式计算出最后一个数，然后再把两个数都向前移动。
+
+[Offer_10.java](src/Offer_10.java)
+
