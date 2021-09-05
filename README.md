@@ -736,3 +736,18 @@ https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/
 
 [Offer_10.java](src/Offer_10.java)
 
+
+## LeetCode_470_用 Rand7() 实现 Rand10()
+
+https://leetcode-cn.com/problems/implement-rand10-using-rand7/
+
+难度：中等
+
+这道题使用 `rand7() + rand7()` 再去取余是错误的，因为某些值有多种组合方式，这种单纯相加是不正确的。
+
+这里可以想想一个密码锁，分别代表了两位数，然后使用 `rand7() - 1` 去分别获取两位数的每个位置的数字，然后组成了一个 7 进制的数字，它的范围为 `[0,48]`（6*7+6），因为是 7 进制所以不能有 6。
+
+然后我们再进行拒绝采样，使得返回的值只在 `[1,10]` 的范围内，拒绝采样后各个数出现的概率还是均衡的。同时为了降低对 `rand7()` 的调用次数，使用了对 `[1,40]` 进行取余，实现了映射。
+
+[LeetCode_470.java](src/LeetCode_470.java)
+
