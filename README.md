@@ -751,3 +751,14 @@ https://leetcode-cn.com/problems/implement-rand10-using-rand7/
 
 [LeetCode_470.java](src/LeetCode_470.java)
 
+
+## LeetCode_704_二分查找
+
+https://leetcode-cn.com/problems/binary-search/
+
+难度：简单
+
+就真是普通的二分搜索，要注意二分搜索修改左右指针的时候，要将 `mid - 1` 或者 `mid + 1` 再赋值，同时还要注意循环的条件要用 `l <= r` 因为会有移动指针都到了同一个位置，但是那个位置又没有和 target 比较过，会漏掉。
+
+[LeetCode_704.java](src/LeetCode_704.java)
+
