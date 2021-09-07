@@ -762,3 +762,18 @@ https://leetcode-cn.com/problems/binary-search/
 
 [LeetCode_704.java](src/LeetCode_704.java)
 
+
+## LeetCode_1221_分割平衡字符串
+
+在一个 平衡字符串 中，'L' 和 'R' 字符的数量是相同的。
+
+给你一个平衡字符串 s，请你将它分割成尽可能多的平衡字符串。
+
+https://leetcode-cn.com/problems/split-a-string-in-balanced-strings/
+
+难度：简单
+
+字符为 `L` 的时候 +1，为 `R` 的时候 -1。遍历整个字符串，当数量之差为 0 的时候说明找到了一个平衡字符串。
+
+[LeetCode_1221.java](src/LeetCode_1221.java)
+
