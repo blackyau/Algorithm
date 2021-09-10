@@ -777,3 +777,13 @@ https://leetcode-cn.com/problems/split-a-string-in-balanced-strings/
 
 [LeetCode_1221.java](src/LeetCode_1221.java)
 
+
+## LeetCode_1894_找到需要补充粉笔的学生编号
+
+https://leetcode-cn.com/problems/find-the-student-that-will-replace-the-chalk/
+
+难度：中等
+
+先遍历一遍数组求和，然后再 `k = k % sum` 之后就只需要遍历一次了。
+
+[LeetCode_1894.java](src/LeetCode_1894.java)
