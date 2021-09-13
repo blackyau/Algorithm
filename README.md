@@ -805,3 +805,14 @@ https://leetcode-cn.com/problems/valid-parenthesis-string/
 
 [LeetCode_678.java](src/LeetCode_678.java)
 
+
+## LeetCode_447_回旋镖的数量
+
+https://leetcode-cn.com/problems/number-of-boomerangs/
+
+难度：中等
+
+用两层 for 穷举出所有的点 i，然后去穷举所有满足 ij 和 ik 距离相等的点有多少个，想象一个 V 形折线我们固定了最下面的拐点，然后穷举出所有的可以作为端点的点。最后在直接使用 `cnt*(cnt-1)` 计算出 cnt 个数字，两两匹配有多少种结果。
+
+[LeetCode_447.java](src/LeetCode_447.java)
+
