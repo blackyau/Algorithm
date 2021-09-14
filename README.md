@@ -816,3 +816,20 @@ https://leetcode-cn.com/problems/number-of-boomerangs/
 
 [LeetCode_447.java](src/LeetCode_447.java)
 
+
+## LeetCode_524_通过删除字母匹配到字典里最长单词
+
+给你一个字符串 s 和一个字符串数组 dictionary 作为字典，找出并返回字典中最长的字符串，该字符串可以通过删除 s 中的某些字符得到。
+
+如果答案不止一个，返回长度最长且字典序最小的字符串。如果答案不存在，则返回空字符串。
+
+https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/
+
+难度：中等
+
+先对字符串数组进行排序，将最长的最前面（逆序），如果长度一样的就看字典序（ASCII码）。然后遍历每一个字符串数组里面的字符串，使用双指针。
+
+首先令 i 和 j 都为 0，然后匹配 `s[i] == dictionary[x][j]` 如果想等的话，说明找到了一个开始的，那么就将 `j++`。同时无论这个字符是否匹配，本次匹配之后都要将 `i++`，这样就可以做到”删除 s 中某些字符“。那么当某一个指针走到头的时候，就判断一下 `j` 是否与这个字符串长度相等，想等就说明这个字符串就是要找的结果了。
+
+[LeetCode_524.java](src/LeetCode_524.java)
+
