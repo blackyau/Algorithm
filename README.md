@@ -833,3 +833,20 @@ https://leetcode-cn.com/problems/longest-word-in-dictionary-through-deleting/
 
 [LeetCode_524.java](src/LeetCode_524.java)
 
+
+## LeetCode_162_寻找峰值
+
+峰值元素是指其值严格大于左右相邻值的元素。
+
+给你一个整数数组 nums，找到峰值元素并返回其索引。数组可能包含多个峰值，在这种情况下，返回 任何一个峰值 所在位置即可。
+
+https://leetcode-cn.com/problems/find-peak-element/
+
+难度：中等
+
+一开始用的直接遍历，但是还要注意边界的问题，因为题目默认将数组的两边看作无限小，所以就算是最左边的数字，只要它比右边的大那么它也就是峰值，因为左边看作无限小。所以在遍历的时候，可以用逆向思想。一开始就把遍历的这个位置看作是峰值，只判断一下它左右两边是否有效，如果有效的话就看左右两边是不是比它要大，如果大的话这个位置就不行，如果都小的话就是这个位置了。
+
+二分的思想是一直往最大的那个方向去靠近，对于边界的判断还是有点模糊。
+
+[LeetCode_162.java](src/LeetCode_162.java)
+
