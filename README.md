@@ -850,3 +850,19 @@ https://leetcode-cn.com/problems/find-peak-element/
 
 [LeetCode_162.java](src/LeetCode_162.java)
 
+
+## LeetCode_650_只有两个键的键盘
+
+https://leetcode-cn.com/problems/2-keys-keyboard/
+
+难度：中等
+
+使用 DFS 递归，使用的参数为指定的 n、已有的 'A' 数量、剪贴板里面 'A' 的数量。
+
+出口为：已有数量等于 n 返回 0。已有数量大于 n 返回无穷大。
+
+- 当已有的数量和剪贴板的数量不一样的时候，就可以进行复制，同时 return 的时候要 +1。
+- 当剪贴板的内容和已有数量不一样的时候，就可以进行粘贴，最后取小的那个。
+
+[LeetCode_650.java](src/LeetCode_650.java)
+
