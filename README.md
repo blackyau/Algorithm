@@ -866,3 +866,18 @@ https://leetcode-cn.com/problems/2-keys-keyboard/
 
 [LeetCode_650.java](src/LeetCode_650.java)
 
+
+## LeetCode_326_3的幂
+
+给定一个整数，写一个函数来判断它是否是 3 的幂次方。如果是，返回 true ；否则，返回 false 。
+
+难度：简单
+
+https://leetcode-cn.com/problems/power-of-three/
+
+最常规的循环写法，就是一直不停的和 3 求余看看是否为 0，如果为 0 就直接 `/=` 如果不是就停止，并判断现在这个数是否为 1，为 1 就是幂次方。同时还需要注意一下 1 也是 3 的幂次方，因为 0 次方为 1。
+
+还有一种方法，因为 3 是一个质数而且题目范围只有 `int`，那么可以利用质数的特性求出 `int` 中最大的 3 次幂，然后看那个数能不能除尽 n。
+
+[LeetCode_326.java](src/LeetCode_326.java)
+
