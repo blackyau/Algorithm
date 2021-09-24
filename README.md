@@ -881,3 +881,15 @@ https://leetcode-cn.com/problems/power-of-three/
 
 [LeetCode_326.java](src/LeetCode_326.java)
 
+## LeetCode_430_扁平化多级双向链表
+
+难度：中等
+
+https://leetcode-cn.com/problems/flatten-a-multilevel-doubly-linked-list/
+
+链表递归模拟题，首先把当前节点的下一个节点存起来，然后去遍历整个链表 `head = head.next` 当遇到有孩子的时候停下来，还是先把 `Node tmp = head.next` 存起来，然后再递归调用这个函数，去获得扁平化了后 child 节点以及之后的节点。
+
+那么后面就是对链表指针的变化，把 child 节点接到 `head.next`，然后再把 child 前驱改成 head，最后把 head 的 child 设为空。然后再把 `tmp` 节点接到最后面。
+
+[LeetCode_430.java](src/LeetCode_326.java)
+
