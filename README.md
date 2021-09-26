@@ -893,3 +893,27 @@ https://leetcode-cn.com/problems/flatten-a-multilevel-doubly-linked-list/
 
 [LeetCode_430.java](src/LeetCode_326.java)
 
+
+## LeetCode_371_两整数之和
+
+给你两个整数 a 和 b ，不使用 运算符 + 和 - ，计算并返回两整数之和。
+
+https://leetcode-cn.com/problems/sum-of-two-integers/
+
+难度：中等
+
+模拟二进制运算，逢 2 进 1，一位一位的处理。
+
+然后对两数当前位进行分情况讨论：
+
+ - 两个当前位均为 1：此时当前位是什么取决于前一位的进位情况，即有 ans |= (t << i)，同时进位 t = 1；
+ - 两个当前位只有一位是 1：此时当前位是什么取决于前一位的进位情况（整理后可统一为 ans |= ((1 ^ t） << i)：
+ 
+前一进位若为 1，结合该位为 1，则有当前位为 0，进位不变 t = 1；
+ 
+前一进位若为 0，结合该位为 1，则有当前位为 1，进位不变 t = 0；
+
+ - 两个当前位为 0：此时当前位是什么取决于前一位的进位情况，则有 ans |= (t << i)，同时进位 t = 0。
+
+[LeetCode_371.java](src/LeetCode_371.java)
+
