@@ -931,3 +931,17 @@ https://leetcode-cn.com/problems/arranging-coins/
 暴力就完事儿！虽然这个题用一元二次方程的公式法也可以解出来。
 
 [LeetCode_441.java](src/LeetCode_441.java)
+
+## LeetCode_476_数字的补数
+
+对整数的二进制表示取反（0 变 1 ，1 变 0）后，再转换为十进制表示，可以得到这个整数的补数。
+
+给你一个整数 num ，输出它的补数。
+
+https://leetcode-cn.com/problems/number-complement/
+
+难度：简单
+
+因为 num 的二进制表示不包含前面的 0，所以要先找到这个 num 的最高位。首先从高位往低位遍历，当找到 1 的位置 res 的时候，再从低位往 res 进行遍历，逐位取反操作。
+
+[LeetCode_476.java](src/LeetCode_476.java)
