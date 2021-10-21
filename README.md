@@ -945,3 +945,33 @@ https://leetcode-cn.com/problems/number-complement/
 因为 num 的二进制表示不包含前面的 0，所以要先找到这个 num 的最高位。首先从高位往低位遍历，当找到 1 的位置 res 的时候，再从低位往 res 进行遍历，逐位取反操作。
 
 [LeetCode_476.java](src/LeetCode_476.java)
+
+
+## LeetCode_66_加一
+
+给定一个由 整数 组成的 非空 数组所表示的非负整数，在该数的基础上加一。
+
+最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。
+
+https://leetcode-cn.com/problems/plus-one/
+
+难度：简单
+
+我还傻乎乎的用模拟，看了个题解一下子都觉得自己人都傻了。因为题目就是两种情况，非 9 的加一，要不就是 9 加一。所以只要分别模拟就行了。如果有进位到多出一位，那么肯定就是 1 开头后面都是 0，又因为数组默认值就是 0 就不管了。
+
+```java
+class Solution {
+    public int[] plusOne(int[] digits) {
+        for (int i = digits.length - 1; i >= 0; i--) {
+            digits[i]++;
+            digits[i] = digits[i] % 10;
+            if (digits[i] != 0) return digits;
+        }
+        digits = new int[digits.length + 1];
+        digits[0] = 1;  // 新建数组默认就是 0，后面不用赋值
+        return digits;
+    }
+}
+```
+
+[LeetCode_66.java](src/LeetCode_66.java)
