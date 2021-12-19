@@ -975,3 +975,13 @@ class Solution {
 ```
 
 [LeetCode_66.java](src/LeetCode_66.java)
+
+## LeetCode_997_找到小镇的法官
+
+https://leetcode-cn.com/problems/find-the-town-judge/
+
+难度：简单
+
+一开始只想到了通过一个数组来储存被信任的人数，没有考虑到法官不能去信任别人的问题。后面看了题解才明白，可以通过信任别人就--，被信任就++，然后看最后的数字是不是 n-1 就好了
+
+[LeetCode_997.java](src/LeetCode_997.java)
